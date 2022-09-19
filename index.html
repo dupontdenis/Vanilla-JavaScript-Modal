@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="td">
+    <fieldset>
+      <legend>Evaluez </legend>
+      <pre>
+      let n = 0;
+  
+  console.log(`Stopped at ${n+=0.1}`);
+      </pre>
+    </fieldset>
+    <button data-modal-target="#td-one">help</button>
+    <div class="modal" id="td-one">
+      <div class="modal-header">
+        <div class="title">Aide</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        Utilisez la console de votre navigateur !
+      </div>
+    </div>
+
+
+  </div>
+  <div class="td">
+    <fieldset>
+      <legend>Evaluez </legend>
+      <pre>
+
+let n = 0;
+
+console.log(`Stopped at ${n+=0.1}`);
+console.log(`Stopped at ${n+=0.1}`);
+console.log(`Stopped at ${n+=0.1}`);     
+    </pre>
+    </fieldset>
+    <button data-modal-target="#td-two">help</button>
+    <div class="modal" id="td-two">
+      <div class="modal-header">
+        <div class="title">Aide 😒 </div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        Utilisez la console de votre navigateur !
+      </div>
+    </div>
+  </div>
+  <div class="td">
+    <fieldset>
+        <legend>Evaluez </legend> 
+        <pre>
+let n = 0;
+
+while ( true ) {
+   n += 0.1;
+   if (n === 0.3 || n === 100 || n > 10000 )   break;
+}
+console.log(`la valeur de n = ${n}`); 
+    </pre>
+    </fieldset>
+    <button data-modal-target="#td-three">help</button>
+    <div class="modal" id="td-three">
+      <div class="modal-header">
+        <div class="title">Aide</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        😍 Number.EPSILON (et non zéro) permet de tester la différence !
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay"></div>
+</body>
+
+</html>
