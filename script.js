@@ -1,26 +1,23 @@
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const openModalButton = document.querySelector('[data-modal-target]')
+const closeModalButton = document.querySelector('[data-close-button]')
 const overlay = document.getElementById('overlay')
 
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
+
+openModalButton.addEventListener('click', () => {
+  const modal = document.querySelector(openModalButton.dataset.modalTarget)
+  openModal(modal)
 })
+
 
 overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
-  modals.forEach(modal => {
-    closeModal(modal)
-  })
+  const modal = document.querySelector('.modal.active')
+  closeModal(modal)
+
 })
 
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
+closeModalButton.addEventListener('click', () => {
     const modal = button.closest('.modal')
     closeModal(modal)
-  })
 })
 
 function openModal(modal) {
