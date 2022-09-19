@@ -16,7 +16,7 @@ overlay.addEventListener('click', () => {
 })
 
 closeModalButton.addEventListener('click', () => {
-    const modal = button.closest('.modal')
+    const modal = closeModalButton.closest('.modal')
     closeModal(modal)
 })
 
